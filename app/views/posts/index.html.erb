@@ -1,0 +1,12 @@
+<h1>ARCFEELGROUP株式会社　掲示板</h1>
+<%= link_to '書いてください', '/posts/new' %>
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="post-date">
+      投稿日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
